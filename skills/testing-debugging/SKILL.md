@@ -40,6 +40,12 @@ ZTEST(basic_test, test_pass) {
 - **HIL Validation**: Use hardware maps to consistently run critical hardware tests on real devices during every release cycle.
 - **Stack Safety**: Always enable `CONFIG_STACK_SENTINEL` and the Thread Analyzer during development to catch memory issues early.
 
+## Validation Checklist
+- [ ] `twister` executes selected test suites with no unexpected failures.
+- [ ] At least one `ZTEST` suite runs in simulation and reports pass/fail correctly.
+- [ ] Tracing or thread-analyzer output is captured and reviewed for hotspots.
+- [ ] CI artifacts include machine-readable reports (for example `twister.json`).
+
 ## Resources
 
 - **[References](references/)**:

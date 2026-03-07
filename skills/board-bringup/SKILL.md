@@ -24,6 +24,23 @@ Handle hardware iterations and SoC variants cleanly.
 - **Reference**: **[hwmv2_structure.md](references/hwmv2_structure.md#revision-management)**
 - **Key Tools**: Multi-revision `board.yml`, revision-specific overlays.
 
+## Quick Start (Board Skeleton)
+```text
+boards/<vendor>/<board>/
+  board.yml
+  <board>_defconfig
+  <board>.dts
+  Kconfig.board
+  Kconfig.defconfig
+  CMakeLists.txt
+```
+
+## Validation Checklist
+- [ ] `board.yml` defines board name, SoC, and revisions consistently.
+- [ ] `west build -b <board> samples/hello_world` completes successfully.
+- [ ] DTS and defconfig settings are applied in the generated build output.
+- [ ] Revision-specific overlays are selected correctly when building a non-default revision.
+
 ## Best Practices
 - **Use `_common.dtsi`**: Share devicetree definitions across all board revisions.
 - **Follow HWMv2**: Avoid the legacy board structure (`Kconfig.defconfig`, etc.).

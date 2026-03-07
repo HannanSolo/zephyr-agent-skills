@@ -33,6 +33,12 @@ void save_data(struct nvs_fs *fs, uint16_t id, void *data, size_t len) {
 - **Collision Prevention**: Define NVS Entry IDs in a centralized header file to prevent accidental overwrites across modules.
 - **Runtime Layout Checks**: Always query the flash controller for page sizes (`flash_get_page_layout`) rather than assuming hardcoded sector sizes.
 
+## Validation Checklist
+- [ ] `nvs_mount()` succeeds on boot for the configured storage partition.
+- [ ] Written values survive reset and read back with matching length and content.
+- [ ] Partition layout in DTS matches runtime flash-map queries.
+- [ ] Repeated write cycles do not produce mount/read corruption errors.
+
 ## Resources
 
 - **[References](references/)**:

@@ -12,6 +12,11 @@ The **Zephyr Index** is your entry point to a suite of specialized Agent Skills 
 - You need a high-level overview of the Zephyr skill ecosystem.
 - You want to navigate between foundational, common, and advanced Zephyr features.
 
+## Quick Start (Skill Selection)
+1. Open **[quick_reference.md](references/quick_reference.md)** and match your task category.
+2. If the task spans multiple domains, follow **[decision_tree.md](references/decision_tree.md)**.
+3. Open the selected skill `SKILL.md`, then load only the referenced docs needed for the current task.
+
 ## Navigation Hub
 
 ### 1. Skill Selection

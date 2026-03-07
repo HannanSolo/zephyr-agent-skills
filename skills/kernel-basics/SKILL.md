@@ -39,6 +39,12 @@ void my_fn(void) {
 K_THREAD_DEFINE(worker_tid, 1024, worker_fn, NULL, NULL, NULL, 5, 0, 0);
 ```
 
+## Validation Checklist
+- [ ] Log output includes module tag and expected log level filtering.
+- [ ] At least one worker thread starts and runs at the intended priority.
+- [ ] Shell command registration appears in `help` output and executes without faults.
+- [ ] No blocking or mutex misuse appears in ISR-context paths.
+
 ## Resources
 
 - **[References](references/)**:

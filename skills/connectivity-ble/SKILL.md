@@ -43,6 +43,12 @@ void start_simple_adv(void) {
 - **Decoupled Messaging**: Use Zbus to feed data into the BLE module, keeping the radio logic separate from the application logic.
 - **Idle Bundling**: Use the "Send-When-Idle" pattern specifically to reduce the number of wake-ups for the radio controller.
 
+## Validation Checklist
+- [ ] Device advertises with expected name/flags and is discoverable by a BLE scanner.
+- [ ] Central can connect, exchange GATT data, and disconnect without stack errors.
+- [ ] Configured connection parameters are reflected after negotiation.
+- [ ] Send-When-Idle flow batches traffic instead of transmitting every sample immediately.
+
 ## Resources
 
 - **[References](references/)**:
