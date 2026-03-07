@@ -40,6 +40,12 @@ ZTEST(basic_test, test_pass) {
 - **HIL Validation**: Use hardware maps to consistently run critical hardware tests on real devices during every release cycle.
 - **Stack Safety**: Always enable `CONFIG_STACK_SENTINEL` and the Thread Analyzer during development to catch memory issues early.
 
+## Automation Tools
+- **[twister_smoke.py](scripts/twister_smoke.py)**: Run a small Twister suite and print result summary.
+
+## Examples & Templates
+- **[testcase.yaml.template](assets/testcase.yaml.template)**: Starter testcase metadata for Twister.
+
 ## Validation Checklist
 - [ ] `twister` executes selected test suites with no unexpected failures.
 - [ ] At least one `ZTEST` suite runs in simulation and reports pass/fail correctly.
@@ -52,3 +58,7 @@ ZTEST(basic_test, test_pass) {
   - `ztest_framework.md`: Writing tests with expectations and suites.
   - `twister_testing.md`: Using the test runner and metadata.
   - `tracing_debugging.md`: Tracing, stack analysis, and debugging backends.
+- **[Scripts](scripts/)**:
+  - `twister_smoke.py`: Lightweight Twister runner with summary output.
+- **[Assets](assets/)**:
+  - `testcase.yaml.template`: Reusable testcase metadata template.

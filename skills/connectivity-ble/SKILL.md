@@ -43,6 +43,12 @@ void start_simple_adv(void) {
 - **Decoupled Messaging**: Use Zbus to feed data into the BLE module, keeping the radio logic separate from the application logic.
 - **Idle Bundling**: Use the "Send-When-Idle" pattern specifically to reduce the number of wake-ups for the radio controller.
 
+## Automation Tools
+- **[ble_timing_helper.py](scripts/ble_timing_helper.py)**: Convert advertising/connection intervals from ms to BLE timing units.
+
+## Examples & Templates
+- **[gatt_service_template.c](assets/gatt_service_template.c)**: Starter custom GATT service definition.
+
 ## Validation Checklist
 - [ ] Device advertises with expected name/flags and is discoverable by a BLE scanner.
 - [ ] Central can connect, exchange GATT data, and disconnect without stack errors.
@@ -55,3 +61,7 @@ void start_simple_adv(void) {
   - `ble_fundamentals.md`: GATT, GAP, and connection basics.
   - `send_when_idle.md`: Implementing the idle-bundle pattern.
   - `power_optimization.md`: Parameter tuning and power-saving Kconfigs.
+- **[Scripts](scripts/)**:
+  - `ble_timing_helper.py`: BLE interval conversion helper.
+- **[Assets](assets/)**:
+  - `gatt_service_template.c`: Custom service template for GATT.

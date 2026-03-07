@@ -39,6 +39,12 @@ void my_fn(void) {
 K_THREAD_DEFINE(worker_tid, 1024, worker_fn, NULL, NULL, NULL, 5, 0, 0);
 ```
 
+## Automation Tools
+- **[log_summary.py](scripts/log_summary.py)**: Parse Zephyr runtime logs and summarize counts by level/module.
+
+## Examples & Templates
+- **[shell_command_template.c](assets/shell_command_template.c)**: Starter command set for shell registration patterns.
+
 ## Validation Checklist
 - [ ] Log output includes module tag and expected log level filtering.
 - [ ] At least one worker thread starts and runs at the intended priority.
@@ -51,3 +57,7 @@ K_THREAD_DEFINE(worker_tid, 1024, worker_fn, NULL, NULL, NULL, 5, 0, 0);
   - `threads.md`: Configuration and creation of kernel threads.
   - `logging.md`: Log levels, modules, and backends.
   - `shell.md`: Interactive command registration and subcommands.
+- **[Scripts](scripts/)**:
+  - `log_summary.py`: Runtime log summarizer for quick diagnostics.
+- **[Assets](assets/)**:
+  - `shell_command_template.c`: Shell command registration template.
